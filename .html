@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Washing Machine Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Washing Machine Scheduler</h1>
+        
+        <!-- Schedule Display -->
+        <div id="schedule-display">
+            <h2>Current Schedule</h2>
+            <p>Current User: <span id="current-user">None</span></p>
+            <p>Time Remaining: <span id="time-remaining">N/A</span></p>
+            <h3>Next Users:</h3>
+            <ul id="next-users-list">
+            </ul>
+        </div>
+        <!-- ... Existing HTML ... -->
+<p>Time Remaining: <span id="time-remaining">N/A</span></p>
+<div id="time-extension">
+  
+    <button id="extend-5">Extend by 5 min</button>
+    <button id="extend-10">Extend by 10 min</button>
+    <button id="extend-15">Extend by 15 min</button>
+    <button id="extend-5">End Early</button>
+</div>
+<!-- ... Existing HTML ... -->
+
+        
+        <!-- Reservation Form -->
+        <div id="reservation-form">
+            <h2>Reserve Washing Machine</h2>
+            <form id="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="end-time">End Time (HH:MM):</label>
+                <input type="time" id="end-time" name="end-time" required>
+                
+                <input type="submit" value="Reserve">
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
