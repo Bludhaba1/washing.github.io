@@ -1,5 +1,32 @@
 // Initialize the user list
 let userList = [];
+document.addEventListener('DOMContentLoaded', () => {
+    // Load user data from localStorage if available
+    const storedUserData = JSON.parse(localStorage.getItem('washingMachineUserData'));
+    if (storedUserData) {
+        usersInLine = storedUserData.usersInLine;
+        updateNextUsersList();
+        if (usersInLine.length > 0) {
+            startCountdown();
+        }
+    }
+
+    // ... (previous code)
+
+    function updateLocalStorage() {
+        localStorage.setItem('washingMachineUserData', JSON.stringify({ usersInLine }));
+    }
+
+    // ... (previous code)
+
+    function startCountdown() {
+        // ... (previous code)
+
+        if (usersInLine.length > 0) {
+            updateLocalStorage();
+        }
+    }
+
 
 // Load data from localStorage when the page loads
 const loadFromLocalStorage = () => {
